@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+/* Botones */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus:ring-gray-500;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-lg shadow-sm border p-6;
+}
+
+/* Inputs */
+.input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500;
+}
+
+/* Labels */
+.label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+/* Colores personalizados */
+.bg-primary-25 {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* Modo móvil para cocina */
+.cocina-movil {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.cocina-movil .card {
+  margin: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background: white;
+  border: none;
+}
+
+.cocina-movil h1 {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cocina-movil .bg-white {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Pantalla completa */
+.cocina-pantalla-completa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: white;
+  overflow-y: auto;
+}
+
+.cocina-pantalla-completa .card {
+  font-size: 1.1rem;
+}
+
+.cocina-pantalla-completa .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Responsive mejorado para móviles */
+@media (max-width: 768px) {
+  .cocina-movil .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .cocina-movil .card {
+    margin: 0;
+    border-radius: 0.75rem;
+  }
+  
+  .cocina-movil .btn {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .cocina-movil h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animaciones para pedidos nuevos */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.pedido-nuevo {
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+/* Estados de pedidos con colores */
+.estado-pendiente {
+  border-left: 4px solid #f59e0b;
+}
+
+.estado-en-preparacion {
+  border-left: 4px solid #3b82f6;
+}
+
+.estado-listo {
+  border-left: 4px solid #10b981;
+}
+
+.estado-entregado {
+  border-left: 4px solid #6b7280;
+} 

@@ -1,0 +1,28 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "localhost"
+  },
+  "database": {
+    "path": "./database/restaurante.db"
+  },
+  "pdf": {
+    "outputDir": "./recibos",
+    "fontSize": {
+      "title": 20,
+      "subtitle": 12,
+      "body": 10,
+      "small": 8
+    }
+  },
+  "restaurant": {
+    "defaultName": "Mi Restaurante",
+    "defaultTax": 0,
+    "defaultOpeningTime": "08:00",
+    "defaultClosingTime": "22:00"
+  },
+  "ui": {
+    "alertDuration": 3000,
+    "autoCloseAlerts": true
+  }
+} 

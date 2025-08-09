@@ -1,0 +1,30 @@
+{
+  "name": "restaurante-backend",
+  "version": "1.0.0",
+  "description": "Backend para aplicación de restaurante",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "init-db": "node database/init.js",
+    "migrate": "node migrate-db.js",
+    "migrate-stock": "node migrate-stock.js",
+    "migrate-stock-simple": "node migrate-stock-simple.js",
+    "cleanup": "node cleanup-duplicates.js",
+    "cleanup-products": "node cleanup-products.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.9",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "node-fetch": "^3.3.2",
+    "pdfkit": "^0.14.0",
+    "socket.io": "^4.7.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
